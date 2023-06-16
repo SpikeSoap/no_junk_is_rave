@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <!--LINKS-->
+    <link rel="stylesheet" href="../css/registrar.css">
+</head>
+
+<body>
+    <div class="regis-container">
+
+        <div class="registrarse">
+            <div class="title-modal">
+                <h2 class="titulo-encabezado">No Junk no rave</h2>
+            </div>
+            <!--Formulario-->
+            <form class="registrar-modal" action="javascript:void(0);" name="registrar" method="get">
+                <h2>Registro</h2>
+                <label class="lDato">Nombre</label>
+                <input type="text" class="iDato" id="iNombre" name="nNombre" autofocus>
+                <label class="lDato">Correo</label>
+                <input type="email" class="iDato" id="iCorreo" name="nCorreo">
+                <label class="lDato">Contraseña</label>
+                <input type="password" id="iPass" class="iDato" name="nPass">
+
+                <!--Condiciones de uso-->
+                <section class="letr-peq">
+                    <div class="aceptar-cond">
+                    <input id="condi-uso" type="checkbox">
+                    <p class="letra-peq">Si continúas, aceptas los <a class="politicas"
+                            href="https://policy.pinterest.com/es/terms-of-service">Términos del servicio
+                        </a> de Pinterest y confirmas que has leído nuestra <a class="politicas"
+                            href="https://policy.pinterest.com/es/privacy-policy">
+                            Política de privacidad. </a>
+                    </p>
+                </div>
+                    <a class="politicas" href="https://policy.pinterest.com/es/notice-at-collection">Aviso de
+                        recopilación
+                        de datos
+                    </a>
+                </section>
+
+                <!-- Botones -->
+                <input class=" iDato btn-volver" href="../index.html" value="Volver">
+                <button class=" iDato button-regis">
+                    <a id="btn-registro">
+                        Registrarme
+                    </a>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="../script/registrar.js"></script>
+</body>
+
+</html>

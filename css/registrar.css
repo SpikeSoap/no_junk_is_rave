@@ -1,0 +1,130 @@
+/* Contenido general */
+
+@font-face {
+    font-family: 'Slackey';
+    src: url(/tipografías/Slackey-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'SourceCode';
+    src: url(/tipografías/SourceCodePro-Medium.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa: #FF5ED2;
+    --rosa-oscuro: #FF0060;
+    --blanco: #FFFFFF;
+    --amarillo: #F6ED57;
+    --azul: #1E33EF;
+    --tipo-titulo: 'Slackey';
+    --texto: 'SourceCode';
+}
+
+
+/* registrarse.html */
+
+.regis-container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    font-family: var(--texto);
+}
+
+.registrarse {
+    width: 35%;
+    height: 99vh;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgba(217, 248, 38, 0.8);
+    font-size: 1vw;
+}
+
+.title-modal{
+    color: black;
+    font-size: 2em;
+}
+
+.titulo-encabezado {
+    padding-top: 4%;
+    font-family: var(--tipo-titulo);
+}
+
+.registrar-modal{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 4%;
+    
+}
+
+.registrar-modal > h2{
+    text-align: center;
+}
+
+.iDato{
+    height: 5vh;
+    font-size: 1vw;
+    border: none;
+    border-radius: 5vw;
+}
+
+.lDato{
+    font-size: 1.2vw;
+}
+
+/* Condiciones de uso */
+.letr-peq {
+    width: 80%;
+    height: 13px;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.aceptar-cond{
+    display: flex;
+    align-items: first baseline;
+}
+
+.politicas {
+    font-weight: 900;
+    text-decoration: none;  
+}
+
+.politicas:hover {
+    text-decoration: underline;
+}
+
+/* Botonera */
+
+.btn-volver {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    background-color: rgb(235, 31, 31);
+    color: #ffffff;
+    font-size: 1vw;
+    margin-top: 45%;
+}
+
+.button-regis {
+    width: 100%;
+    height: 5vh;
+    
+    background-color: rgb(0, 81, 255);
+}
+#btn-registro{
+    font-size: 1vw;
+}
