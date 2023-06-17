@@ -27,7 +27,8 @@ btnRegistrar.addEventListener("click", ()=>{
         var guardado = localStorage.getItem('My array');
         console.log('Valor obtenido: ', JSON.parse(guardado)); 
 
-         location.href = "../index.html";
+
+        fechaRegistro();
 
     } else if(btnCondiciones.checked == false){
 
@@ -38,5 +39,12 @@ btnRegistrar.addEventListener("click", ()=>{
         alert("Introduzca todos los campos");
     }
 
-}) 
+});
+
+
+function fechaRegistro(){
+    const fechaRegistro = new Date();
+        alert("Se ha registrado en la siguiente fecha: " + fechaRegistro);
+         location.href = "../index.html";
+}
 

@@ -1,8 +1,10 @@
-const btnReserva =document.querySelector(".reserva-des");
+const btnReserva = document.querySelector(".reserva-des");
 
-btnReserva.addEventListener("click", ()=>{
+if (btnReserva) {
+    btnReserva.addEventListener("click", () => {
 
-    location.href="../pages/reserva.html"
-});
+        location.href = "../pages/reserva.html"
+    });
+}
 
 
