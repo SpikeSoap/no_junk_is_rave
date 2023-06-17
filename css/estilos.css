@@ -24,6 +24,7 @@
     --azul: #1E33EF;
     --verde: #38D075 ;
     --tipo-titulo: 'Slackey';
+    --texto: 'SourceCode';
 }
 
 /*Fin contenido general*/
@@ -322,8 +323,38 @@
 
 .art-cancion {
     width: 40%;
-    height: 60%;
+    height: 65%;
     margin: auto;
     background-color: #de2dac;
     border-radius: 25px;
 }
+
+.cancion-title{
+    width: 85%;
+    color: white;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 1.3em;
+    
+}
+
+.cancion-con{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 1%;
+ 
+}
+
+.cancion-des{
+    width: 45%;
+    font-size: 1em;
+    font-family: var(--texto);
+
+}
+
+.cancion-img{
+    width: 30%;
+}
+

@@ -20,6 +20,7 @@ for (let i = 0; i < tabla.length; i++) {
 
 //función para coger la hora
 let horario;
+
 hora.addEventListener("change", (e) => {
 
     horario = e.target.value;
@@ -38,3 +39,9 @@ btnSiguiente.addEventListener("click", () => {
         alert("rellene el día y la hora");
     }
 });
+
+
+
+
+
+
