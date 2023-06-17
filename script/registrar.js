@@ -2,6 +2,8 @@ const btnVolver = document.querySelector(".btn-volver");
 const btnRegistrar = document.querySelector("#btn-registro");
 const btnCondiciones = document.querySelector("#condi-uso");
 
+
+
 let usuariosRegis =[];
 
 //volver a la página de inicio
@@ -37,3 +39,4 @@ btnRegistrar.addEventListener("click", ()=>{
     }
 
 }) 
+
