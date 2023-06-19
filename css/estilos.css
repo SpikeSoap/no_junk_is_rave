@@ -315,19 +315,28 @@
 
 .color-cancion{
     background-color: var(--verde);
+    transition: background .4s ease-in;
 }
 
 .color-encabezado{
     color: black;
 }
 
-.art-cancion {
+.hero-cancion{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    
+}
+
+/* .art-cancion {
     width: 40%;
     height: 65%;
     margin: auto;
     background-color: #de2dac;
     border-radius: 25px;
-}
+    
+} */
 
 .cancion-title{
     width: 85%;
@@ -358,3 +367,92 @@
     width: 30%;
 }
 
+
+/* Borrar */
+
+.container-cancion {
+    width: 100%;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-cancion {
+    width: 40%;
+    height: 65%;
+    margin: auto;
+    background-color: #de2dac;
+    border-radius: 25px;
+    position: absolute;
+    transition: transform .4s ease;
+}
+
+.itarjeta{
+    display: none;
+}
+
+#item-1:checked~.cards #song-10,
+#item-2:checked~.cards #song-1,
+#item-3:checked~.cards #song-2,
+#item-4:checked~.cards #song-3,
+#item-5:checked~.cards #song-4,
+#item-6:checked~.cards #song-5,
+#item-7:checked~.cards #song-6,
+#item-8:checked~.cards #song-7,
+#item-9:checked~.cards #song-8,
+#item-10:checked~.cards #song-9
+ {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-2,
+#item-2:checked~.cards #song-3,
+#item-3:checked~.cards #song-4,
+#item-4:checked~.cards #song-5,
+#item-5:checked~.cards #song-6,
+#item-6:checked~.cards #song-7,
+#item-7:checked~.cards #song-8,
+#item-8:checked~.cards #song-9,
+#item-9:checked~.cards #song-10,
+#item-10:checked~.cards #song-1
+{
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-1,
+#item-2:checked~.cards #song-2,
+#item-3:checked~.cards #song-3, 
+#item-4:checked~.cards #song-4,
+#item-5:checked~.cards #song-5,
+#item-6:checked~.cards #song-6,
+#item-7:checked~.cards #song-7,
+#item-8:checked~.cards #song-8,
+#item-9:checked~.cards #song-9,
+#item-10:checked~.cards #song-10
+{
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* var fileInput = document.getElementById("audioFileInput");
+  var audioPlayer = document.getElementById("audioPlayer");
+
+  fileInput.addEventListener("change", function(event) {
+    var file = event.target.files[0];
+    var fileURL = URL.createObjectURL(file);
+
+    audioPlayer.src = fileURL;
+    audioPlayer.play(); */
