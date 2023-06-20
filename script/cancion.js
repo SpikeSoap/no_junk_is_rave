@@ -6,7 +6,7 @@ const albumes = [
         titulo: "Morphine - Have a lucky day",
         caratula: "../images/Caratula1.png",
         descripcion: "Morphine de Have a Lucky Day es una canción con un ritmo hipnotizante y letras introspectivas que te sumergen en una atmósfera melancólica y adictiva.",
-        cancion: "../audio/cancion1.wav",
+        cancion: "../audio/cancion1.mp3",
     },
     {
         id: 2,
@@ -109,9 +109,9 @@ for (let i = 0; i < albumes.length; i++) {
     // Imagen play
     let btnPlay = document.createElement("img");
     btnPlay.className = "btn-play";
-    btnPlay.id= i + 1;
+    btnPlay.id = i + 1;
     btnPlay.classList.add("btn-play");
-    btnPlay.src= "../images/play.png";
+    btnPlay.src = "../images/play.png";
     cardDes.appendChild(btnPlay);
 
     // Imagen carátula
@@ -121,31 +121,106 @@ for (let i = 0; i < albumes.length; i++) {
     imagen.classList.add("cancion-img");
     cardCont.appendChild(imagen);
 
-    
+
 }
+
+// const reproducir = document.querySelectorAll(".btn-play");
+// const titleCan = document.querySelector(".title-cancion");
+// const caraTula = document.querySelector(".caratula");
+// let cont = 0;
+// let playGuardado;
+// for (let i = 0; i < reproducir.length; i++) {
+
+
+//     reproducir[i].addEventListener("click", (e) => {
+//         let play = e.target.id;
+//         playGuardado = play;
+//         let cancion = new Audio("../audio/cancion" + play + ".mp3");
+
+//         console.log("cancion: " + cancion.src);
+//         console.log("playGuardado: " + playGuardado);
+
+//         if (play == albumes[i].id && cont == 0) {
+//             console.log("Sin entrar: " + playGuardado);
+//             cancion.play();
+
+//             titleCan.textContent = albumes[i].titulo;
+
+//             caraTula.src = albumes[i].caratula;
+//             caraTula.classList.add("caratula");
+
+//             cont = 1;
+//         }
+//         if (play == albumes[i].id && cont == 1) {
+//             cancion.addEventListener("ended", () => {
+
+//                 console.log("Contador: " + cont);
+//                 cont = 0;
+//                 for (let a = 1; a <= albumes.length; a++) {
+
+//                     if (playGuardado == albumes[a].id && cont == 0) {
+//                         // console.log(albumes[a].id);
+//                         // console.log(playGuardado);
+//                         let cancionNueva = new Audio("../audio/cancion" + playGuardado + ".mp3");
+//                         cancionNueva.play();
+//                         cont = 1;
+//                     }
+//                     if (playGuardado == albumes[a].id && cont == 1) {
+//                         cancionNueva.addEventListener("ended", () => {
+//                             cancion = new Audio("../audio/cancion" + play + ".mp3");
+//                             cancion.play();
+//                              cont = 0;
+//                         })
+
+//                     }
+//                 }
+//             })
+//         }
+
+//     });
+
+// };
+
 
 const reproducir = document.querySelectorAll(".btn-play");
 const titleCan = document.querySelector(".title-cancion");
 const caraTula = document.querySelector(".caratula");
+let currentIndex = -1;
+let isPlaying = false;
 
+function reproducirCancion(index) {
+  if (index >= 0 && index < albumes.length) {
+    const album = albumes[index];
+    const cancion = new Audio(album.cancion);
 
-for(let i = 0; i<reproducir.length; i++ ){
+    cancion.addEventListener("ended", () => {
+      currentIndex++;
+      if (currentIndex < albumes.length) {
+        reproducirCancion(currentIndex);
+      } else {
+        currentIndex = -1;
+        isPlaying = false;
+      }
+    });
 
- reproducir[i].addEventListener("click", (e)=>{
-    let play = e.target.id;
+    cancion.play();
+    isPlaying = true;
+    titleCan.textContent = album.titulo;
+    caraTula.src = album.caratula;
+    caraTula.classList.add("caratula");
+  }
+}
 
-    if(play== albumes[i].id){
-       let cancion = new Audio("../audio/cancion" + (i+1)  + ".mp3");
+for (let i = 0; i < reproducir.length; i++) {
+  reproducir[i].addEventListener("click", (e) => {
+    const play = parseInt(e.target.id);
+    const albumIndex = albumes.findIndex((album) => album.id === play);
 
-       cancion.play();
-
-        titleCan.textContent = albumes[i].titulo;
-        // for(let a = 0; a <caraTula.length; a++){
-
-        //     caraTula.src = albumes[i].caratula;
-        // }
-        caraTula.src = albumes[i].caratula;
-        caraTula.classList.add("caratula");
+    if (albumIndex >= 0) {
+      if (!isPlaying) {
+        currentIndex = albumIndex;
+        reproducirCancion(currentIndex);
+      }
     }
- });   
-};
+  });
+}
