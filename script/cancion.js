@@ -197,6 +197,7 @@ function reproducirCancion(index) {
       currentIndex++;
       if (currentIndex < albumes.length) {
         reproducirCancion(currentIndex);
+        console.log("CurrentIndex: " + currentIndex);
       } else {
         currentIndex = -1;
         isPlaying = false;
@@ -220,7 +221,11 @@ for (let i = 0; i < reproducir.length; i++) {
       if (!isPlaying) {
         currentIndex = albumIndex;
         reproducirCancion(currentIndex);
+        console.log(albumIndex);
       }
     }
   });
 }
+
+
+
