@@ -124,64 +124,7 @@ for (let i = 0; i < albumes.length; i++) {
 
 }
 
-// const reproducir = document.querySelectorAll(".btn-play");
-// const titleCan = document.querySelector(".title-cancion");
-// const caraTula = document.querySelector(".caratula");
-// let cont = 0;
-// let playGuardado;
-// for (let i = 0; i < reproducir.length; i++) {
-
-
-//     reproducir[i].addEventListener("click", (e) => {
-//         let play = e.target.id;
-//         playGuardado = play;
-//         let cancion = new Audio("../audio/cancion" + play + ".mp3");
-
-//         console.log("cancion: " + cancion.src);
-//         console.log("playGuardado: " + playGuardado);
-
-//         if (play == albumes[i].id && cont == 0) {
-//             console.log("Sin entrar: " + playGuardado);
-//             cancion.play();
-
-//             titleCan.textContent = albumes[i].titulo;
-
-//             caraTula.src = albumes[i].caratula;
-//             caraTula.classList.add("caratula");
-
-//             cont = 1;
-//         }
-//         if (play == albumes[i].id && cont == 1) {
-//             cancion.addEventListener("ended", () => {
-
-//                 console.log("Contador: " + cont);
-//                 cont = 0;
-//                 for (let a = 1; a <= albumes.length; a++) {
-
-//                     if (playGuardado == albumes[a].id && cont == 0) {
-//                         // console.log(albumes[a].id);
-//                         // console.log(playGuardado);
-//                         let cancionNueva = new Audio("../audio/cancion" + playGuardado + ".mp3");
-//                         cancionNueva.play();
-//                         cont = 1;
-//                     }
-//                     if (playGuardado == albumes[a].id && cont == 1) {
-//                         cancionNueva.addEventListener("ended", () => {
-//                             cancion = new Audio("../audio/cancion" + play + ".mp3");
-//                             cancion.play();
-//                              cont = 0;
-//                         })
-
-//                     }
-//                 }
-//             })
-//         }
-
-//     });
-
-// };
-
-
+//Hacer que suene la siguiente canción que hayas elegido, y que luego se preproduzca el resto
 const reproducir = document.querySelectorAll(".btn-play");
 const titleCan = document.querySelector(".title-cancion");
 const caraTula = document.querySelector(".caratula");
