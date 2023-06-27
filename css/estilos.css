@@ -32,7 +32,8 @@
 /*index.html*/
 
 .container {
-    max-width: min(100%, 1600px);
+    width: 100%;
+    height: 100vh;
     margin: auto;
     font-family: var(--tipo-titulo);
 }
@@ -63,11 +64,12 @@
 }
 
 .cont-voicer {
-    width: 10%;
+    width: 12%;
+    
 }
 
 .voicer {
-    width: 100%;
+    width: 80%;
     margin-top: 1%;
 }
 
@@ -156,15 +158,13 @@
 }
 
 
-/*Footer*/
+/*Footer index.html*/
 
 .piedepag-index {
     width: 100%;
-    height: auto;
+    height: 24%;
     display: flex;
     justify-content: center;
-    background-color: var(--rosa);
-
 }
 
 .cont-footer {
@@ -177,17 +177,14 @@
 
 .btn-reservar {
     width: 40%;
-    height: 50px;
+    height: 40%;
     border: none;
-    padding-top: 3%;
     background-color: var(--rosa-oscuro);
     border-radius: 5vw;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 
-
-/**/
 .btn-reservar::before {
     content: '';
     position: absolute;
@@ -220,7 +217,7 @@
     color: var(--blanco);
     font-size: clamp(0.7em, 3vw, 3em);
     font-family: var(--tipo-titulo);
-    margin-top: -8%;
+    
 }
 
 .sub-navegador {
@@ -252,6 +249,8 @@
     width: 10%;
 }
 
+/*FIN index.html*/
+/**/
 /*reserva.html*/
 
 .color-reserva {
@@ -260,10 +259,11 @@
 
 .hero-reserva {
     width: 100%;
-    height: 48vh;
+    height: 48%;
     display: flex;
     flex-flow: column;
-    background-color: #FF5ED2;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -365,22 +365,20 @@
     float: right;
 }
 
-/* cancion.html */
+/*FIN reserva.html*/
+/**/
+/*Inicio cancion.html*/
 
 .color-cancion {
     background-color: var(--verde);
     transition: background .4s ease-in;
 }
 
-.color-encabezado {
-    color: black;
-}
-
 .hero-cancion {
+    height: 48vh;
+    width: 100%;
     display: flex;
     flex-flow: row;
-    width: 100%;
-    background-color: var(--verde);
 }
 
 .cards {
@@ -432,7 +430,6 @@
 
 .cancion-img {
     width: 30%;
-    border: 2px solid yellow;
 }
 
 .caratula {
@@ -440,12 +437,9 @@
     height: auto;
 }
 
-/* Borrar */
-
 .container-cancion {
     width: 100%;
 }
-
 
 .art-cancion {
     width: 40%;
