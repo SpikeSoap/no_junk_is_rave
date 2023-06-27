@@ -5,7 +5,7 @@ const albumes = [
         id: 1,
         titulo: "Morphine - Have a lucky day",
         caratula: "../images/Caratula1.png",
-        descripcion: "Morphine de Have a Lucky Day es una canción con un ritmo hipnotizante y letras introspectivas que te sumergen en una atmósfera melancólica y adictiva.",
+        descripcion: "Morphine de Have a Lucky Day es una canción con un ritmo hipnotizante y letras. introspectivas que te sumergen en una atmósfera melancólica y adictiva.",
         cancion: "../audio/cancion1.mp3",
     },
     {
@@ -26,21 +26,21 @@ const albumes = [
         id: 4,
         titulo: "Erikah Badu - On & On",
         caratula: "../images/Caratula4.png",
-        descripcion: "Erykah Badu es un icónico tema de neo soul que captura la esencia del estilo y la personalidad de la artista. Con su voz seductora y letras introspectivas.",
+        descripcion: "Erykah Badu es un icónico tema de neo soul que captura la esencia del estilo y la personalidad de la artista. Con su voz seductora.",
         cancion: "../audio/cancion4.mp3",
     },
     {
         id: 5,
         titulo: "Johnny Hallyday - Marie",
         caratula: "../images/Caratula5.png",
-        descripcion: " Con su voz poderosa y emotiva, Hallyday expresa la pasión y el deseo por su amada Marie. La canción evoca una mezcla de romanticismo y nostalgia.",
+        descripcion: "Con su voz poderosa y emotiva, expresa la pasión y el deseo por su amada Marie. La canción evoca una mezcla de romanticismo y nostalgia.",
         cancion: "../audio/cancion5.mp3",
     },
     {
         id: 6,
         titulo: "Bob Dylan - Saved",
         caratula: "../images/Caratula6.png",
-        descripcion: "Con una fusión de rock y gospel, Dylan explora su fe y el concepto de salvación. La canción transmite una energía espiritual y presenta letras poderosas que reflejan la evolución.",
+        descripcion: "Dylan explora su fe y el concepto de salvación. La canción transmite una energía espiritual y presenta letras poderosas que reflejan la evolución.",
         cancion: "../audio/cancion6.mp3",
     },
     {
@@ -54,7 +54,7 @@ const albumes = [
         id: 8,
         titulo: "Esne Beltza - Esnesaltzailearena ",
         caratula: "../images/Caratula8.png",
-        descripcion: "Es una canción enérgica y festiva que combina elementos del rock, ska y música tradicional vasca. Con su ritmo contagioso y letras enérgicas, invita a bailar.",
+        descripcion: "Es una canción enérgica y festiva que combina elementos del rock, ska y música tradicional vasca. Con ritmo contagioso y letras enérgicas, invita a bailar.",
         cancion: "../audio/cancion8.mp3",
     },
     {
@@ -68,15 +68,16 @@ const albumes = [
         id: 10,
         titulo: "CCR - Have You Ever Seen The Rain",
         caratula: "../images/Caratula10.png",
-        descripcion: "Con su melodía pegadiza y letras introspectivas, la canción reflexiona sobre la ilusión y la desilusión en la vida.",
+        descripcion: "Con su melodía pegadiza y letras introspectivas, la canción reflexiona sobre la ilusión y la desilusión en la vida.Con su melodía pegadiza y letras.",
         cancion: "../audio/cancion10.mp3",
     },
 ];
 
 // Creación de las tarjetas 
 const cards = document.querySelector(".cards");
-
+//albumes.length
 for (let i = 0; i < albumes.length; i++) {
+   
     let card = document.createElement("label");
     card.className = "card";
     card.id = "song-" + (i + 1);
@@ -85,13 +86,13 @@ for (let i = 0; i < albumes.length; i++) {
     cards.appendChild(card);
 
     let titulo = document.createElement("h3");
-    titulo.className = "titulo" + i;
+    titulo.className = "titulo-can";
     titulo.textContent = albumes[i].titulo;
     titulo.classList.add("cancion-title");
     card.appendChild(titulo);
 
     let cardCont = document.createElement("div");
-    cardCont.className = "card-cont" + i;
+    cardCont.className = "card-cont";
     cardCont.classList.add("cancion-con");
     card.appendChild(cardCont);
 
@@ -101,7 +102,7 @@ for (let i = 0; i < albumes.length; i++) {
     cardCont.appendChild(cardDes);
 
     let texto = document.createElement("p");
-    texto.className = "texto" + i;
+    texto.className = "texto-can";
     texto.textContent = albumes[i].descripcion;
     texto.classList.add("cancion-des");
     cardDes.appendChild(texto);
@@ -120,7 +121,6 @@ for (let i = 0; i < albumes.length; i++) {
     imagen.src = albumes[i].caratula;
     imagen.classList.add("cancion-img");
     cardCont.appendChild(imagen);
-
 
 }
 
