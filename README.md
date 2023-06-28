@@ -1,6 +1,18 @@
 # no_junk_is_rave
 
+# Author
+ Gorka Jabonero, alias: @JuicySoap
 
+# Contacto
+alazgorjs@gmail.com
+
+# Funcionalidades
+- Creación de elementos desde Js
+- Suenan las canciones cuando clickas en los play
+- Hace efecto radio
+- Registrar usuario
+
+# Descripción del proyecto
 Este es un proyecto que trata de crear una radio indie universitaria, como las radios pirata que había hasta los 2000 y la llegada de internet. No Junk is Rave pretende volver a esa filosofía de descubrir bandas que están recien empezando, o que no tienen mucha publicidad o medios de difusión. Quiero que sea una ventana, y alternativa a todas las emisoras de radio que hay en el territorio español.
 
 
