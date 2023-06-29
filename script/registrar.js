@@ -3,7 +3,6 @@ const btnRegistrar = document.querySelector("#btn-registro");
 const btnCondiciones = document.querySelector("#condi-uso");
 
 
-
 let usuariosRegis =[];
 
 //volver a la página de inicio
@@ -41,10 +40,21 @@ btnRegistrar.addEventListener("click", ()=>{
 
 });
 
+//Mostrar fecha y día del usuario registrado
+
 
 function fechaRegistro(){
-    const fechaRegistro = new Date();
-        alert("Se ha registrado en la siguiente fecha: " + fechaRegistro);
+    let fecha = new Date();
+    let diaSemana = obtenerDiaSemana(fecha.getDay());
+
+    var fechaRegistro = "Hoy es " + diaSemana + ", " + fecha.getDate() + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear();
+    
+    alert("Se ha registrado en la siguiente fecha: " + fechaRegistro);
          location.href = "../index.html";
+}
+
+function obtenerDiaSemana(dia) {
+    var diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+    return diasSemana[dia];
 }
 
