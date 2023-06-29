@@ -594,6 +594,10 @@
     .texto-can{
         font-size: 0.7em;
     }
+
+    .cont-saddy{
+        display: none;
+    }
  }
 
 @media (max-width:700px) {
