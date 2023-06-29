@@ -127,7 +127,7 @@ for (let i = 0; i < albumes.length; i++) {
 //Hacer que suene la siguiente canción que hayas elegido, y que luego se preproduzca el resto
 const reproducir = document.querySelectorAll(".btn-play");
 const titleCan = document.querySelector(".title-cancion");
-const caraTula = document.querySelector(".caratula");
+const caraTula = document.querySelector(".caratula-img");
 let currentIndex = -1;
 let isPlaying = false;
 
