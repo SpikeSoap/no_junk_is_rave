@@ -65,7 +65,7 @@
 
 .cont-voicer {
     width: 12%;
-    
+
 }
 
 .voicer {
@@ -137,8 +137,6 @@
     top: 30%;
     left: 24%;
     transform: translate(-50%, -10%);
-
-
 }
 
 .container-mus>img {
@@ -200,7 +198,7 @@
 }
 
 .btn-reservar:hover::before {
-    scale: 3;
+    scale: 2.5;
 }
 
 .btn-reservar:hover {
@@ -217,7 +215,7 @@
     color: var(--blanco);
     font-size: clamp(0.7em, 3vw, 3em);
     font-family: var(--tipo-titulo);
-    
+
 }
 
 .sub-navegador {
@@ -256,77 +254,6 @@
 .color-reserva {
     background-color: var(--amarillo);
 }
-/* 
-.hero-reserva {
-    width: 100%;
-    height: 48%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.mes-reserva{
-    width: 60%;
-    height: 100%;
-    border: 2px solid red;
-}
-
-.art-reser {
-    width: 100%;
-    height: 85%;
-    margin: 1% 21% 0 21%; 
-    background-color: var(--azul);
-    border-radius: 25px;
-    border: 2px solid red;
-}
-
-#mes {
-    text-align: center;
-    font-size: 2.5em;
-    color: white;
-    background: #000;
-}
-
-.table-reser {
-    width: 100%;
-    height: 90%;
-    text-align: center;
-    color: white;
-}
-
-.table-head {
-    font-size: 1.7em;
-}
-
-.table-col {
-    font-size: 1.3em;
-}
-
-.table-col:hover {
-    background-color: #000000;
-    border-radius: 5px;
-}
-
-.botonera-reserva {
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    justify-content: space-between;
-    margin-block-start: 9%;
-}
-
-.btn-botonera {
-    width: 25%;
-    text-align: center;
-    border-radius: 10px;
-    border: none;
-}
-
-.btn-reserva {
-    background-color: #38D075;
-} */
-
 
 .hero-reserva {
     width: 100%;
@@ -401,14 +328,14 @@
 /*Footer reserva.html*/
 .cuadro-repro {
     background-color: var(--rosa-oscuro);
-    width: 30%;
+    max-width: clamp(25em, 28vw, 28em);
     height: 18vh;
     display: flex;
     border-radius: 3px;
 }
 
 .repro-des {
-    width: 73%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -416,7 +343,7 @@
     text-align: center;
 }
 
-.title-cancion{
+.title-cancion {
     font-size: 1.1em;
 }
 
@@ -432,9 +359,6 @@
     width: 50%;
 }
 
-.caratula-reserva {
-    width: 32%;
-}
 
 .caratula-img {
     height: 100%;
@@ -489,9 +413,9 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
     padding: 2%;
-    
+
 }
 
 .cancion-des {
@@ -582,27 +506,42 @@
  * MEDIA QUERY
  */
 
- @media (max-width:1024px) {
+@media (max-width:1024px) {
     .caratula-img {
         height: 100%;
     }
 
-    .titulo-can{
+    .titulo-can {
         font-size: 0.9em;
     }
 
-    .texto-can{
-        font-size: 0.7em;
+    .card-cont {
+        width: 100%;
+        height: 36vh;
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .cont-saddy{
+    .texto-can {
         display: none;
     }
- }
 
-@media (max-width:700px) {
+    .cancion-img {
+        width: 45%;
+    }
+
+    .btn-reservar:hover::before {
+        scale: 1.5;
+    }
+}
+
+@media (max-width:750px) {
 
     .reproductor {
+        border: 2px solid red;
+        top: 40%;
         width: 75%;
         height: 25%;
     }
@@ -625,14 +564,23 @@
     }
 
     /*cancion.html*/
-    
-    .footer-cancion{
-        display: flex;
-        flex-flow: column;
-        gap: 15%;
+
+    .cuadro-repro {
+        max-width: clamp(20em, 25vw, 25em);
+    }
+}
+
+@media (max-width:500px) {
+
+    .reproductor {
+        top: 30%;
     }
 
-    .smily-cancion{
-        opacity: 0;
+    .cancion-img {
+        width: 60%;
+    }
+
+    .cont-smily {
+        display: none;
     }
 }
