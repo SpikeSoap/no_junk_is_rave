@@ -7,7 +7,7 @@ const hora = document.querySelector(".hora");
 
 //función para coger el día
 let dia;
-let mes = "junio";
+let mes = "julio";
 let anyo = "2023";
 let fecha = [];
 
