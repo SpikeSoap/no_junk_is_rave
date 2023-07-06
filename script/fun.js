@@ -8,3 +8,15 @@ if (btnReserva) {
 }
 
 
+const btnPlay = document.querySelector(".botn-play");
+const cancion = new Audio("audio/cancion1.mp3");
+
+
+btnPlay.addEventListener("click", ()=>{
+
+    cancion.play();
+
+});
+
+
+
